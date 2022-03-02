@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+        "http://struts.apache.org/dtds/struts-2.5.dtd">
+<struts>
+    <constant name="struts.devMode" value="true" />
+    <constant name="struts.enable.DynamicMethodInvocation" value="false"/>
+
+    <package name="default" namespace="/" extends="struts-default">
+
+        <default-action-ref name="accueil"/>
+        <action name="accueil">
+            <result>/WEB-INF/pages/home.jsp</result>
+        </action>
+        <action name="connexion" class="actions.compte" method="execute">
+            <result name="success">/WEB-INF/pages/Menu.jsp</result>
+        </action>
+        <action name="logout" class="actions.compte" method="logout">
+            <result name="logout">/WEB-INF/pages/home.jsp</result>
+        </action>
+        <action name="mesParis" class="actions.mesParis" method="execute">
+            <result name="success">/WEB-INF/pages/mesParis.jsp</result>
+        </action>
+        <action name="menu" class="actions.compte" method="menu">
+            <result name="menu">/WEB-INF/pages/Menu.jsp</result>
+        </action>
+        <action name="parisouverts" class="actions.compte" method="parisouverts">
+            <result name="success">/WEB-INF/pages/ParisOuverts.jsp</result>
+        </action>
+        <action name="annulerpari" class="actions.mesParis" method="annulerPari">
+            <result name="success">/WEB-INF/pages/annulerpari.jsp</result>
+        </action>
+        <action name="parier" class="actions.parier" method="execute">
+            <result name="success">/WEB-INF/pages/parier.jsp</result>
+        </action>
+        <action name="confirmationPari" class="actions.parier" method="confirmationPari">
+            <result name="success">/WEB-INF/pages/parier.jsp</result>
+        </action>
+    </package>
+
+</struts>
