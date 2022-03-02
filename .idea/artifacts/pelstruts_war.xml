@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="pelstruts:war">
+    <output-path>$PROJECT_DIR$/pelstruts/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>pelstruts</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="pelstruts-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="pelstruts:war exploded" />
+    </root>
+  </artifact>
+</component>
